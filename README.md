@@ -16,7 +16,9 @@ It installs an rpm version of Jenkins. This version does create standard init sc
 
 # Build Centos or other Docker image
 
-./build.sh          This now asks questions for version #, base image
+./build.sh
+
+This now asks questions for version #, base image
 
 # Run Docker Jenkins image
 
