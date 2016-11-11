@@ -1,4 +1,4 @@
-# Centos version of the [Official Jenkins Docker image] (https://github.com/jenkinsci/docker) 
+# Centos,Scientific Linux version of the [Official Jenkins Docker image] (https://github.com/jenkinsci/docker) 
 
 The Jenkins Continuous Integration and Delivery server [http://jenkins.io/](http://jenkins.io/).
 
@@ -8,15 +8,15 @@ The main purpose for me was I wanted to use Centos and I do not like the extreme
 
 It has no Vi, no ifconfig, no route to edit or check when you have problems.
 
-So, this starts with the standard centos image and updates it.
+So, this starts with the standard centos or scientific image and updates it.
 
 I also made this install Oracle Jdk 8 latest.
 
 It installs an rpm version of Jenkins. This version does create standard init scripts for jenkins but I do not use them but still use the TINI init system.
 
-# Build Centos Docker image
+# Build Centos or other Docker image
 
-./build.sh
+./build.sh          This now asks questions for version #, base image
 
 # Run Docker Jenkins image
 
@@ -31,5 +31,5 @@ It installs an rpm version of Jenkins. This version does create standard init sc
 
 Jump on irc.freenode.net and the #jenkins room. Ask!
 
-Stan Towianski
+Stan Towianski   (stashu.pub@gmail.com)
 
