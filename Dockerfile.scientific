@@ -1,4 +1,5 @@
-FROM centos
+FROM revive/scientific-linux
+#FROM scientific:latest
 
 RUN yum -y update
 RUN yum -y install git curl wget sudo net-tools tar gzip 

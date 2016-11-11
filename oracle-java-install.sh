@@ -9,6 +9,10 @@ URL=$(curl -s http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downl
 AVAILABLE=$(echo $URL | grep -o -P 'jdk-8u.{0,3}' | cut -d "u" -f 2)
 CURRENT=$("$J_INSTALL_DIR"/bin/java -version 2>&1 | awk '/version/ {print $3}' | cut -d_ -f 2 | tr -d '"')
 
+if [ -z $CURRENT ]; then
+CURRENT=0
+fi
+
 echo " URL =$URL="
 echo "   CURRENT =$CURRENT="
 echo " AVAILABLE =$AVAILABLE="
@@ -57,6 +61,8 @@ echo " name=$name="
 
 fi
 
+echo "   CURRENT =$CURRENT="
+echo " AVAILABLE =$AVAILABLE="
 if [ $AVAILABLE -eq $CURRENT ]; then
-    echo "Java is up to date"
+    echo "Java was up to date"
 fi
